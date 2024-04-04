@@ -9,22 +9,35 @@
     <title>Curriculo Arthur</title>
 
     <style>
-        table{
+        table:not(#cabeçalho table){
             width: 300px;
             height: 200px;
         }
-        table,th, td{
+        table,th, td:not(#cabeçalho th, table, td){
             border:  1px solid; 
         }       
-        thead{
+        thead:not(#cabeçalho thead){
             background-color: aquamarine;
         }
-        td{
+        td:not(#cabeçalho td){
             background-color:midnightblue;
         }
-        tbody>th{
+        tbody>th:not(#cabeçalho th){
             background-color:rgb(214, 61, 6);
         }
+        #cabeçalho > table {
+
+            border: none; /* Removendo a borda */
+            border-collapse: collapse; /* Para garantir que não haja espaçamento entre as células */
+        }
+
+        /* Estilos para as células da tabela */
+        #cabeçalho > table th,#cabeçalho > table td {
+            padding-right: 50px;
+            border: none; /* Removendo a borda */
+            
+        }
+        
         
     </style>
 
@@ -32,20 +45,28 @@
     
 </head>
 <body>
-    <h1>Arthur Confessor</h1>
-    <img src = "https://avatars.githubusercontent.com/u/84741667?v=4" alt = "Foto do Arthur Octávio Oliveira Confessor" width="280px"/>
-    <hr>
-    <h2>Descrição</h2>
-    <p>Olá, meu nome é Arthur Octávio Oliveira Confessor. Eu tenho 20 anos de idade, sou natural de Cuiabá-MT.<br>
-        Atualmente sou estudante de <strong>Engenharia da Computação no IFMT - Campus Cuiabá</strong>, e também estagiário no<br>
-        projeto de Implementação do SUAP nas Escolas Técnicas do Estado de Mato Grosso. Neste estágio, tenho<br>
-        aprendido sobre metodologias ágile, mapeamento de processos utilizando a ferramenta HEFLO, e também<br>
-        trabalhando como tester das funções que são implementadas no sistema.<br>
-        Tendo trabalhado em projetos de implementação do SUAP durante a faculdade, tenho experiência em<br>
-        metodologias ágile, treinamentos e comunicação com time de desenvolvimento, além de uma rápida curva de<br>
-        aprendizagem, me permitindo aprender mais e de forma rápida.<br>
-        Logo, estou aberto a aprender novas tecnologias, com o objetivo de contribuir com a empresa e também com<br>
-        o meu conhecimento, utilizando o mesmo para aplicar na organização, visando uma maior eficiência e modernidade.</p>
+    <div id = "cabeçalho">
+        <table>
+            <tr>
+                <td><img src = "https://avatars.githubusercontent.com/u/84741667?v=4" alt = "Foto do Arthur Octávio Oliveira Confessor" width="250px"/></td>
+                <td>
+                    <h1>Arthur Confessor</h1>
+                    <p >Olá, meu nome é Arthur Octávio Oliveira Confessor. Eu tenho 20 anos de idade, sou natural de Cuiabá-MT.<br>
+                     Atualmente sou estudante de <strong>Engenharia da Computação no IFMT - Campus Cuiabá</strong>, e também estagiário no<br>
+                     projeto de Implementação do SUAP nas Escolas Técnicas do Estado de Mato Grosso. Neste estágio, tenho<br>
+                     aprendido sobre metodologias ágile, mapeamento de processos utilizando a ferramenta HEFLO, e também<br>
+                     trabalhando como tester das funções que são implementadas no sistema.<br>
+                     Tendo trabalhado em projetos de implementação do SUAP durante a faculdade, tenho experiência em<br>
+                     metodologias ágile, treinamentos e comunicação com time de desenvolvimento, além de uma rápida curva de<br>
+                     aprendizagem, me permitindo aprender mais e de forma rápida.<br>
+                     Logo, estou aberto a aprender novas tecnologias, com o objetivo de contribuir com a empresa e também com<br>
+                     o meu conhecimento, utilizando o mesmo para aplicar na organização, visando uma maior eficiência e modernidade.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    
     <hr>
     <h2>Formações</h2>
 
